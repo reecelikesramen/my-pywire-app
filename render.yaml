@@ -4,13 +4,11 @@ services:
     runtime: python
     plan: standard
     buildPackageCommand: apt-get update && apt-get install -y build-essential curl && curl -fsSL https://deb.nodesource.com/setup_22.x | bash - && apt-get install -y nodejs && corepack enable pnpm
-    buildCommand: uv sync --frozen && uv cache prune --ci
+    buildCommand: CARGO_HOME=/tmp/cargo uv sync --frozen && uv cache prune --ci
     startCommand: uv run pywire run --host 0.0.0.0 --port $PORT --workers 5
     envVars:
       - key: PYTHON_VERSION
         value: "3.12"
-      - key: CARGO_HOME
-        value: "/tmp/cargo"
       - key: REDIS_URL
         fromService:
           name: my-pywire-app-redis
