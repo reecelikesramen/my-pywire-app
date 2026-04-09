@@ -9,6 +9,8 @@ services:
     envVars:
       - key: PYTHON_VERSION
         value: "3.12"
+      - key: CARGO_HOME
+        value: "/tmp/cargo"
       - key: REDIS_URL
         fromService:
           name: my-pywire-app-redis
