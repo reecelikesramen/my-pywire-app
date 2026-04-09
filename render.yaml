@@ -3,6 +3,7 @@ services:
     name: my-pywire-app
     runtime: python
     plan: standard
+    buildPackageCommand: apt-get update && apt-get install -y build-essential
     buildCommand: uv sync --frozen && uv cache prune --ci
     startCommand: uv run pywire run --host 0.0.0.0 --port $PORT --workers 5
     envVars:
