@@ -397,7 +397,7 @@ wheels = [
 [[package]]
 name = "pywire"
 version = "0.2.7"
-source = { git = "https://github.com/pywire/pywire.git?subdirectory=packages%2Fpywire&rev=feat%2Fstores-deploy-middleware#8eaa0017bd6e04bc4d0ad62c0d7a64e868ed6eec" }
+source = { git = "https://github.com/pywire/pywire.git?subdirectory=packages%2Fpywire&rev=feat%2Fstores-deploy-middleware#d63ab5b99eab6edb653d7e6410618a5c0aadfc8c" }
 dependencies = [
     { name = "jinja2" },
     { name = "msgpack" },
