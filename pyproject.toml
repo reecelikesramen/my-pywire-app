@@ -7,6 +7,3 @@ dependencies = [
     "pywire==0.2.7",
 ]
 
-[tool.uv.sources]
-pywire = { path = "../projects/pywire-monorepo/packages/pywire", editable = true }
-

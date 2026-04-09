@@ -270,7 +270,7 @@ dependencies = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "pywire", editable = "../projects/pywire-monorepo/packages/pywire" }]
+requires-dist = [{ name = "pywire", specifier = "==0.2.7" }]
 
 [[package]]
 name = "platformdirs"
@@ -397,7 +397,7 @@ wheels = [
 [[package]]
 name = "pywire"
 version = "0.2.7"
-source = { editable = "../projects/pywire-monorepo/packages/pywire" }
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "jinja2" },
     { name = "msgpack" },
@@ -409,37 +409,23 @@ dependencies = [
     { name = "uvicorn", extra = ["standard"] },
     { name = "watchfiles" },
 ]
-
-[package.metadata]
-requires-dist = [
-    { name = "aioquic", marker = "extra == 'http3'", specifier = ">=0.9.0" },
-    { name = "black", marker = "extra == 'dev'", specifier = ">=23.0.0" },
-    { name = "build", marker = "extra == 'dev'", specifier = ">=1.0.0" },
-    { name = "coverage", marker = "extra == 'dev'", specifier = ">=7.3.0" },
-    { name = "httpx", marker = "extra == 'dev'", specifier = ">=0.23.0" },
-    { name = "hypercorn", marker = "extra == 'http3'", specifier = ">=0.14.0" },
-    { name = "jinja2", specifier = ">=3.1.0" },
-    { name = "msgpack", specifier = ">=1.0.0" },
-    { name = "msgpack-types", marker = "extra == 'dev'" },
-    { name = "nox", marker = "extra == 'dev'" },
-    { name = "pydantic", specifier = ">=2.0.0" },
-    { name = "pytest", marker = "extra == 'dev'", specifier = ">=7.4.0" },
-    { name = "pytest-asyncio", marker = "extra == 'dev'", specifier = ">=0.21.0" },
-    { name = "pytest-cov", marker = "extra == 'dev'", specifier = ">=4.1.0" },
-    { name = "pytest-playwright", marker = "extra == 'dev'" },
-    { name = "python-multipart", specifier = ">=0.0.6" },
-    { name = "rich-click", specifier = ">=1.9.6" },
-    { name = "ruff", marker = "extra == 'dev'", specifier = ">=0.1.0" },
-    { name = "starlette", specifier = ">=0.35.0" },
-    { name = "textual", specifier = ">=7.4.0" },
-    { name = "ty", marker = "extra == 'dev'" },
-    { name = "uvicorn", extras = ["standard"], specifier = ">=0.27.0" },
-    { name = "watchfiles", specifier = ">=0.21.0" },
+sdist = { url = "https://files.pythonhosted.org/packages/db/dc/903cfda7010e3a3e8ff2498017d1444e5da17c1db5821bcaf8333031e189/pywire-0.2.7.tar.gz", hash = "sha256:90faff1845dab449a9d4b1cb020ae671a991adfa026cdbfe481f87130b0b5d1e", size = 493490, upload-time = "2026-04-08T19:00:21.131Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/4b/5b/90f2ff06a05f3d5fd86863001a1f188464e9b3504239790ba92747867a47/pywire-0.2.7-cp312-cp312-macosx_10_12_x86_64.macosx_11_0_arm64.macosx_10_12_universal2.whl", hash = "sha256:ed485a0f8462998896334af0dd421320606465e419102d5c935fb6afba89f19c", size = 898949, upload-time = "2026-04-08T18:59:55.63Z" },
+    { url = "https://files.pythonhosted.org/packages/8e/41/1047ecb36a4e012264d7b20dabe74cce07776cbc4c21b5302a57e7702faf/pywire-0.2.7-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:9c236622446a2406eb0804da73ea4e7a899e8291c759677792cb4fb85c43b7b1", size = 626161, upload-time = "2026-04-08T18:59:57.19Z" },
+    { url = "https://files.pythonhosted.org/packages/95/07/ecccc16ceba76fdbb984c7f1ad158bc41b6b15b397dc599801a82dddb079/pywire-0.2.7-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:b56a89568c443ccabf064c53797af39c9a374548c74759f71449a2637d8f8e97", size = 658266, upload-time = "2026-04-08T18:59:59.273Z" },
+    { url = "https://files.pythonhosted.org/packages/01/48/ebe6827e8b7218772cd2dde5b8ad53b48ffcca3f11e176b186c065ea6afa/pywire-0.2.7-cp312-cp312-win_amd64.whl", hash = "sha256:16241f3f63a27aee94871781c46ead330c93e9b6200ccca63f06ee37d1c680e1", size = 487660, upload-time = "2026-04-08T19:00:00.566Z" },
+    { url = "https://files.pythonhosted.org/packages/eb/c4/637758192e4d926472a2cc9503af1c685006692a4c896501cac3e43de1d9/pywire-0.2.7-cp313-cp313-macosx_10_12_x86_64.macosx_11_0_arm64.macosx_10_12_universal2.whl", hash = "sha256:c77e2acbe4dc5d9d4245c26df65fbfb1a164c22f3b45f34d60c7ecd5d26ea365", size = 899152, upload-time = "2026-04-08T19:00:01.936Z" },
+    { url = "https://files.pythonhosted.org/packages/74/f7/59e81ec69d5149654356d61b267c2938a3c86d2f674f4c0882b6c3a72a5c/pywire-0.2.7-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:88c35075ca2194da857d30f5ac5b0cef4a4e782f08b5166d24974814c6fceef4", size = 626609, upload-time = "2026-04-08T19:00:04.109Z" },
+    { url = "https://files.pythonhosted.org/packages/c6/16/a744255a86b90942176311ffdecf910db3b0509e84093383e97e0960995b/pywire-0.2.7-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:06d6b94c025950a41f108aa41bc665307a1e22f7f96de68c446382e60ce78d59", size = 658211, upload-time = "2026-04-08T19:00:05.815Z" },
+    { url = "https://files.pythonhosted.org/packages/31/5e/11879373480e2a09b5974f7a56cbb1493896f3a368a4119599cff3464439/pywire-0.2.7-cp313-cp313-win_amd64.whl", hash = "sha256:ccb149ce42c1bb5d54722871235680ead75030e2f48487a041f1ab7120b8cf42", size = 487415, upload-time = "2026-04-08T19:00:07.09Z" },
+    { url = "https://files.pythonhosted.org/packages/26/fd/8c79c6f8165b2bac5a255a4e75f2f4a8b1abe0928843659917e2ea75a1ac/pywire-0.2.7-cp313-cp313t-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:bf136aee3dddbce5387a0b266dbc2937b1e9976965eaba2a226745a805262047", size = 625266, upload-time = "2026-04-08T19:00:08.384Z" },
+    { url = "https://files.pythonhosted.org/packages/61/f9/bc4cee8d934457c78626792ad15a0da1bd55999f2f197aee6836a546cbd9/pywire-0.2.7-cp314-cp314-macosx_10_12_x86_64.macosx_11_0_arm64.macosx_10_12_universal2.whl", hash = "sha256:263d82786c24c22e70fd3b8c99f612c1d0d4d8ef24d607480a4659753e09eaf7", size = 899277, upload-time = "2026-04-08T19:00:09.97Z" },
+    { url = "https://files.pythonhosted.org/packages/60/d5/8840213aeaeb5755fa4680ff0960f719fee640676aca53e7a6655651a911/pywire-0.2.7-cp314-cp314-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:e7862ff45f2ea398d3348b43091bc2e5540571573e621b30e1d1e7815766b3f7", size = 626752, upload-time = "2026-04-08T19:00:11.411Z" },
+    { url = "https://files.pythonhosted.org/packages/f8/02/cb4b0fa6ede70ad02779c02bc14c17a4421399392e4218f3e810ec3ac8e1/pywire-0.2.7-cp314-cp314-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:90685f4c28af8643681601c2aa965d953d9358aa87764a0a8565c555fa267e8b", size = 658499, upload-time = "2026-04-08T19:00:12.973Z" },
+    { url = "https://files.pythonhosted.org/packages/f6/86/b09b0ed3d2a870105ebd94331b3fd70d3df1b92f371981f9a172bed02298/pywire-0.2.7-cp314-cp314-win_amd64.whl", hash = "sha256:fe352f28a88e5c4cd28a8172266c86005b47559e3b189e0083d6bef756695fb8", size = 487608, upload-time = "2026-04-08T19:00:14.476Z" },
+    { url = "https://files.pythonhosted.org/packages/47/25/db91cca03c4126bf2beabb82b1148f5a1e3ea0c97fc510a145e089adcc54/pywire-0.2.7-cp314-cp314t-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:6a29e5d670c31a902af23d2a4c7d52688ceff00e80d1c2393f4bd4672b159fd7", size = 624962, upload-time = "2026-04-08T19:00:16.018Z" },
 ]
-provides-extras = ["dev", "http3"]
-
-[package.metadata.requires-dev]
-dev = [{ name = "mypy", specifier = ">=1.19.1" }]
 
 [[package]]
 name = "pyyaml"
