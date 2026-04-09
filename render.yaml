@@ -2,8 +2,19 @@ services:
   - type: web
     name: my-pywire-app
     runtime: python
-    buildCommand: pip install uv && uv sync --frozen
-    startCommand: uv run pywire run --host 0.0.0.0 --port $PORT --workers 1
+    plan: standard
+    buildCommand: uv sync --frozen && uv cache prune --ci
+    startCommand: uv run pywire run --host 0.0.0.0 --port $PORT --workers 5
     envVars:
       - key: PYTHON_VERSION
         value: "3.12"
+      - key: REDIS_URL
+        fromService:
+          name: my-pywire-app-redis
+          type: keyvalue
+          property: connectionString
+
+  - type: keyvalue
+    name: my-pywire-app-redis
+    plan: starter
+    ipAllowList: []   # internal access only

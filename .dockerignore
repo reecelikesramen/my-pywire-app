@@ -1,0 +1,11 @@
+# flyctl launch added from .gitignore
+**/.venv
+**/__pycache__
+**/*.pyc
+
+# flyctl launch added from .pywire/.gitignore
+.pywire/**/*
+
+# flyctl launch added from .venv/.gitignore
+.venv/**/*
+fly.toml

@@ -4,6 +4,6 @@ version = "0.1.0"
 description = "A new pywire application"
 requires-python = ">=3.12"
 dependencies = [
-    "pywire==0.2.7",
+    "pywire[redis] @ git+https://github.com/pywire/pywire.git@feat/stores-deploy-middleware#subdirectory=packages/pywire",
 ]
 
